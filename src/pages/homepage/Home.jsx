@@ -8,7 +8,7 @@ import AppsIcon from "@material-ui/icons/Apps";
 import Avatar from "@material-ui/core/Avatar";
 
 import "./Home.css";
-import Search from "../components/search/Search";
+import Search from "../../components/search/Search";
 
 function Home() {
   return (
