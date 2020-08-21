@@ -64,7 +64,7 @@ function Home() {
             />
           </Grid>
           <Grid item>
-            <Search hideButtons />
+            <Search />
           </Grid>
         </Grid>
       </Grid>
