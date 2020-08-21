@@ -2,7 +2,6 @@ import React from 'react';
 import './SearchPage.css';
 import { useStateValue } from '../../stateProvider';
 import useGoogleSearch from '../../useGoogleSearch';
-import Response from '../../response';
 import { Link } from 'react-router-dom';
 import Search from '../../components/search/Search'
 //Material UI
@@ -18,8 +17,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 function SearchPage() {
     const [{ term }, dispatch] = useStateValue();
-    // const { data } = useGoogleSearch(term);
-    const data = Response;
+    const { data } = useGoogleSearch(term);
     
     return (
         <div className="search-page">
@@ -77,6 +75,33 @@ function SearchPage() {
                     </Grid>
                     <Grid item md={1} />
                 </Grid>
+            </Grid>
+            <Grid container className="searchPage-results">
+                {true && (
+                    <Grid container className="searchPage-resultCount">
+                        About {data?.searchInformation.formattedTotalResults} results({data?.searchInformation.formattedSearchTime} seconds) for {term}
+                    </Grid>
+                )}
+                {data?.items.map(item => (
+                    <div className="searchPage-result">
+                        <a href={item.link} className="searchPage-displaylink">
+                            {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src &&(
+                                <img className="searchPage-Image" src={
+                                    item.pagemap?.cse_image?.length > 0 &&item.pagemap?.cse_image[0]?.src
+                                }
+                                alt="" />
+                            )}
+                            {item.displayLink}
+                        </a>
+                        <a href={item.link} className="searchPage-title">
+                            <h2>{item.title}</h2>
+                        </a>
+                        <p className="searchPage-resultSnippet">
+                            {item.snippet}
+                        </p>
+                    </div>
+
+                ))}
             </Grid>
         </div>
     )

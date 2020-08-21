@@ -42,3 +42,49 @@
 .searchPage_options{
     padding-right: 5rem;
 }
+
+.searchPage-result{
+    margin: 1rem 0;
+}
+
+.searchPage-results{
+    margin: 1rem 0 0 15rem;
+    max-width: 650px;
+}
+
+
+.searchPage-resultCount{
+    color: #70757a;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.searchPage-displaylink{
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+}
+
+.searchPage-title{
+    text-decoration: none;
+
+}
+.searchPage-title:hover{
+    text-decoration: underline;
+}
+
+.searchPage-title > h2{
+    font-weight: 500;
+}
+
+.searchPage-resultSnippet{
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #4d5156;
+}
+.searchPage-Image{
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 0.6rem;
+}
