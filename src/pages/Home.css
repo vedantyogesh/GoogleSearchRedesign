@@ -1,0 +1,33 @@
+.home {
+  display: flex;
+  direction: column;
+  height: 100vh;
+}
+
+.home-header {
+  display: flex;
+  padding: 20px 30px;
+  justify-content: space-between;
+}
+
+.home-header a {
+  text-decoration: inherit;
+  color: #222;
+  font-size: 2rem;
+}
+
+.home-header a:hover {
+  text-decoration: underline;
+}
+
+.home-body {
+  display: flex;
+  flex: 1;
+  margin-top: 8%;
+  flex-direction: column;
+}
+
+.home-logo {
+  object-fit: contain;
+  height: 8rem;
+}
