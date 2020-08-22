@@ -2,6 +2,7 @@
   display: flex;
   direction: column;
   height: 100vh;
+  background-color: #008af4;
 }
 
 .home-header {
@@ -29,5 +30,39 @@
 
 .home-logo {
   object-fit: contain;
-  height: 6rem;
+  height: 3rem;
+  filter: brightness(0) invert(1);
+}
+
+
+.Logo-bgImage{
+  background-image: url('https://uploads-ssl.webflow.com/5b72c51b79ce4e086b722f7e/5b7323e0578e6e6e19263608_Google_logo_white_2015.png') ;
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  position:absolute;
+  z-index:0;
+  display:block;
+  background-color: transparent;
+  height:25%; 
+  opacity: 0.1;
+  top: -10%;
+  left: 40%;
+  transform: rotate(-90deg);
+  width:108%;
+}
+
+@media(max-width:762px){
+    .home{
+      height: 125vh;
+      width: 100vw;
+      overflow-x: hidden;
+    }
+    .Logo-bgImage{
+      height:25%; 
+      top: 40%;
+      background-size: contain;
+    }
+    .home-body{
+      margin-top: 50%;
+    }
 }
